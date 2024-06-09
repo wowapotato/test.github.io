@@ -1,6 +1,6 @@
 ---
 layout: product
-type: 红酒杯
+type: 毛绒玩偶
 
 ---
 
@@ -28,7 +28,7 @@ type: 红酒杯
 <body>
     <div class="product-container">  
         <div class="product-blog-image">  
-            <img src="https://www.nordicnest.cn/assets/blobs/orrefors-informal-glass-on-foot-36-cl-clear/501918-01_1_ProductImageMain-e38fd7c26f.jpg?preset=medium&dpr=2" alt="Bernadotte Glass">  
+            <img src="https://img30.360buyimg.com/imgzone/jfs/t1/229548/21/3293/142174/6556cf09F3743b6ac/03fa2ed45c858483.jpg" alt="Bernadotte Glass">  
         </div>  
         <div class="product-price">  
             Price: $166

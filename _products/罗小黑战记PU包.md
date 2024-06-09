@@ -1,6 +1,6 @@
 ---
 layout: product
-type: 玻璃杯
+type: 服饰鞋包
 
 ---
 
@@ -28,13 +28,13 @@ type: 玻璃杯
 <body>
     <div class="product-container">  
         <div class="product-blog-image">  
-            <img src="https://www.nordicnest.cn/assets/blobs/scandi-living-karlevi-drinking-glass-33-cl/37096-01-01-2a69277040.jpg?preset=medium&dpr=2" alt="Bernadotte Glass">  
+            <img src="http://photo.ciyuanh.com/static/upload/images/goods/2023/06/03/1685780215108248.jpg" alt="Bernadotte Glass">  
         </div>  
         <div class="product-price">  
-            Price: $89
+            Price: $369  
         </div>  
         <div class="product-description">  
-            Karlevi系列具有柔和的外观，呈现出长圆形，与古典或现代的瓷器餐具都能完美搭配。无论是用于饮水、品茶还是饮酒，Karlevi系列玻璃杯都能提升您的使用体验，让您更好地享受杯中之物。
+            Bernadotte 矮款玻璃杯的设计简约而美观，无多余装饰，适合各种场合使用，提升生活品质。其独特的设计理念和精湛的工艺使其成为一款极具收藏价值的玻璃器皿。这款玻璃杯的容量适中，既满足日常需求，又便于携带。  
         </div>  
     </div>  
 </body>

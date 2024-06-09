@@ -1,6 +1,6 @@
 ---
 layout: product
-type: 高玻璃杯
+type: 毛绒玩偶
 
 ---
 
@@ -28,13 +28,13 @@ type: 高玻璃杯
 <body>
     <div class="product-container">  
         <div class="product-blog-image">  
-            <img src="https://www.nordicnest.cn/assets/blobs/georg-jensen-bernadotte-45cl/568615-01_1_ProductImageMain-e10a89a01c.jpeg?preset=medium&dpr=2" alt="Bernadotte Glass">  
+            <img src="http://photo.ciyuanh.com/tatic/upload/images/2023_23_08_15_09_44_51_1804.jpg" alt="Bernadotte Glass">  
         </div>  
         <div class="product-price">  
-            Price: $9.99
+            Price: $89
         </div>  
         <div class="product-description">  
-            一款精致无铅玻璃器皿，专为日常饮水和各类饮品设计。这款玻璃杯采用环保材料，安全无毒，可长期使用。手工吹制的工艺使玻璃杯线条流畅，边缘圆润，触感舒适。此外，玻璃杯具有良好的耐热耐冷性能，可承受温差变化，适用于冰镇饮料或热饮。
+            Karlevi系列具有柔和的外观，呈现出长圆形，与古典或现代的瓷器餐具都能完美搭配。无论是用于饮水、品茶还是饮酒，Karlevi系列玻璃杯都能提升您的使用体验，让您更好地享受杯中之物。
         </div>  
     </div>  
 </body>

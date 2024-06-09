@@ -4,74 +4,199 @@ title: Product
 ---
 
 <head>
-  <style>
-      .background-image {
-          background-image: url('https://bormiolirocco.com/upload/headers/prodotti_cover_etspjiyj.jpg');
-          background-size: cover;
-          background-position: center;
-          width: 100%;
-          height: 200px;
-          
-      }
-      .container {
-          display: flex;
-      }
-      .sidebar {
-          width: 20%;
-          padding: 10px;
-          background-color: #f8f8f8;
-          border-right: 1px solid #ddd;
-      }
-      .content {
-          width: 80%;
-          padding: 10px;
-      }
-      .products {
-          display: flex;
-          flex-wrap: wrap;
-      }
-      .product-item {
-          width: 48%;
-          margin: 1%;
-          padding: 10px;
-          border: 1px solid #ddd;
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      }
-      .product-item img {
-          max-width: 100%;
-          height: auto;
-      }
-  </style>
-</head>
-<body>
-  <div class="background-image"></div>
+    <style>
+        
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 20%;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-right: 1px solid #ddd;
+        }
+        .content {
+            width: 80%;
+            padding: 10px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .product-item {
+            width: 30%;
+            margin: 1%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* 隐藏溢出内容 */
+            transition: transform 0.3s; /* 添加变换过渡效果 */
+        }
+        .product-item:hover {
+            transform: scale(1.1); /* 鼠标悬停时放大 */
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .product-item h3 {
+            margin-bottom: 5px;
+        }
 
-  <div class="container">
-      <!-- 左侧导航栏 -->
-      <div class="sidebar">
-          <h2>产品类别</h2>
-          <ul>
-              {% assign types = site.products | map: 'type' | uniq %}
-              {% for type in types %}
-              <li><a href="#{{ type }}">{{ type }}</a></li>
-              {% endfor %}
-          </ul>
-      </div>
+        .product-item p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
 
-      <!-- 右侧产品展示区 -->
-      <div class="content">
-          {% for type in types %}
-          <h2 id="{{ type }}">{{ type }}</h2>
-          <div class="products">
-              {% assign type_products = site.products | where: 'type', type %}
-              {% for product in type_products %}
-               <div class="product-item">
-                  <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
-                  <p>{{ product.excerpt }}</p>
-              </div>
-              {% endfor %}
-          </div>
-          {% endfor %}
-      </div>
-  </div>
-</body>
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px; /* 设置宽度和高度 */
+            height: 50px;
+            line-height: 50px; /* 设置行高，使文字垂直居中 */
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            color: white;
+            background-color: #333; /* 修改背景颜色 */
+            border-radius: 50%; /* 设置圆角为50%，使其成为圆形 */
+            border: 1px solid #333; /* 添加边框 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+            transition: background-color 0.3s ease; /* 添加过渡效果 */
+            display: none; /* 默认不显示 */
+        }
+        .red-text {
+        color: red;
+         /* 修改所有链接的颜色和字体 */
+        
+    }
+    </style>
+  </head>
+  <body>
+    <!-- 轮播图部分 -->
+    <div class="carousel">
+        <img src="assets/image/周边页1.png" class="active">
+        <img src="assets/image/周边页2.jpg">
+        <img src="assets/image/周边页3.jpg">
+        <img src="assets/image/周边页4.png">
+        <img src="assets/image/周边页5.jpg">
+        <div class="carousel-buttons">
+            <button onclick="prevImage()">❮</button>
+            <button onclick="nextImage()">❯</button>
+        </div>
+    </div>
+  
+    <div class="container">
+        <!-- 左侧导航栏 -->
+        <div class="sidebar">
+            <h3>产品类别</h3>
+            <ul>
+                {% assign types = site.products | map: 'type' | uniq %}
+                {% for type in types %}
+                <li><a href="#{{ type }}">{{ type }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+  
+        <!-- 右侧产品展示区 -->
+        <div class="content">
+            {% for type in types %}
+            <h3 id="{{ type }}">{{ type }}</h3>
+            <div class="products">
+                {% assign type_products = site.products | where: 'type', type %}
+                {% for product in type_products %}
+                <div class="product-item">
+                    <h4><a href="{{ product.url }}">{{ product.title }}</a></h4>
+                    {% if product.excerpt %}
+                        {% assign excerpt_images = product.excerpt | split: '</p>' %}
+                        {% assign first_image = excerpt_images[0] | split: 'src="' %}
+                        {% assign first_image_url = first_image[1] | split: '"' %}
+                        {% assign first_image_url = first_image_url[0] %}
+                        <img src="{{ first_image_url }}" alt="{{ product.title }}">
+                        <p class="red-text">{{ product.excerpt | strip_html | truncatewords: 2 }}</p>
+                    {% else %}
+                        <p class="red-text">{{ product.content | strip_html | truncatewords: 1 }}</p>
+                    {% endif %}
+                    <p><a href="{{product.url }}">Read more</a></p>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </div>
+  
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        
+        function showImage(index) {
+            images[currentIndex].classList.remove('active');
+            currentIndex = index;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            }
+            images[currentIndex].classList.add('active');
+        }
+  
+        function nextImage() {
+            showImage(currentIndex + 1);
+        }
+  
+        function prevImage() {
+            showImage(currentIndex - 1);
+        }
+  
+        // 自动轮播每隔3秒切换
+        setInterval(nextImage, 3000);
+  
+        // 返回顶部按钮功能
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById('backToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+  
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+  </body>
