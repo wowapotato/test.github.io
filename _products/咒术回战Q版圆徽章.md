@@ -1,6 +1,6 @@
 ---
 layout: product
-type: 文具日用品
+type: 徽章
 
 ---
 
@@ -50,11 +50,11 @@ type: 文具日用品
             border: 1px solid black;
             padding: 20px;
             text-align: center;
-            color:#6495ED;
+            color:#F08080;
             font-size: 15px;
         }
         th {
-            background-color: #6495ED;
+            background-color: #F08080;
         }
         .product-blog-image1 {
             flex: 1;
@@ -66,15 +66,15 @@ type: 文具日用品
 <body>
     <div class="product-container">
             <div class="product-blog-image">  
-                <img src="http://photo.ciyuanh.com/static/upload/images/goods/2020/09/10/1599723389766802.jpg" alt="Bernadotte Glass">  
+                <img src="http://photo.ciyuanh.com/static/upload/images/goods/2021/06/22/1624440204439923.jpg" alt="Bernadotte Glass">  
             </div> 
             <div class="product-details"> 
                 <div class="product-price">  
-                    Price: ￥9.60
+                    Price: ￥19.00
                     <br><br> 
                 </div>  
                 <div class="product-description">  
-                    你是否还记得《一人之下》中那个充满神秘与热血的世界？我们为你带来了这款独家自营的砚池系列文具套装，以动漫中经典的“哪都通快递”为设计灵感，让你在书写与绘画的同时，仿佛置身于那个充满奇幻的动漫世界。
+                    欢迎来到次元世界的独特角落，我们为您带来了一款充满魅力与情怀的动漫卡通周边——正版现货咒术回战吧唧！这款徽章不仅是动漫迷的收藏佳品，更是展示您独特品味的绝佳选择。这款徽章以时光代理人制服为设计灵感，巧妙地将动漫元素融入其中。精致的图案、细腻的线条，以及充满动感的色彩搭配，都展现出设计师对原作的深刻理解与热爱。徽章背面则采用了经典的马口铁材质，不仅耐磨耐用，更增添了一份复古与时尚的气息。
                 </div>  
             </div>
     </div>
@@ -82,7 +82,7 @@ type: 文具日用品
     /* 使用内部样式表来设置样式 */  
     h3 {  
         text-align: center; /* 将h2标签内的文本居中 */  
-        color:#6495ED;
+        color:#F08080;
     }  
     </style>  
     <div class="concent">
@@ -90,15 +90,15 @@ type: 文具日用品
         <table>
             <tr>
                 <td>ACG作品名</td>
-                <td>一人之下</td>
+                <td>咒术回战</td>
             </tr>
             <tr>
                 <td>型号</td>
-                <td>铅笔橡皮</td>
+                <td>圆形Q版徽章</td>
             </tr>
             <tr>
                 <td>周边产品</td>
-                <td>文创文具</td>
+                <td>徽章/纽扣</td>
             </tr>
             <tr>
                 <td>动漫地区</td>
@@ -111,7 +111,9 @@ type: 文具日用品
         </table> 
         <h3>[商品详情]</h3>
         <div class="product-blog-image1">  
-            <img src="http://photo.ciyuanh.com/static/upload/images/goods/2020/09/10/1599723394482724.jpg" alt="Bernadotte Glass">  
+            <img src="http://photo.ciyuanh.com/static/upload/images/goods/2021/06/22/1624440206210543.jpg" alt="Bernadotte Glass">
+            <img src="http://photo.ciyuanh.com/static/upload/images/goods/2021/06/22/1624440207925717.jpg" alt="Bernadotte Glass">
+            <img src="http://photo.ciyuanh.com/static/upload/images/goods/2021/06/22/1624440208106363.jpg" alt="Bernadotte Glass">  
         </div> 
     </div>
 
