@@ -13,8 +13,8 @@ title: Product
         .sidebar {
             width: 20%;
             padding: 10px;
-            background-color: #f8f8f8;
-            border-right: 1px solid #ddd;
+            background-color: #FFFFFF;
+            border-right: 1px solid #f1f1f1;
         }
         .content {
             width: 80%;
@@ -89,18 +89,42 @@ title: Product
             font-size: 14px;
             cursor: pointer;
             color: white;
-            background-color: #333; /* 修改背景颜色 */
+            background-color: red; /* 修改背景颜色 */
             border-radius: 50%; /* 设置圆角为50%，使其成为圆形 */
-            border: 1px solid #333; /* 添加边框 */
+            border: 1px solid #FF0000; /* 添加边框 */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加阴影 */
             transition: background-color 0.3s ease; /* 添加过渡效果 */
             display: none; /* 默认不显示 */
         }
-        .red-text {
-        color: red;
-         /* 修改所有链接的颜色和字体 */
-        
-    }
+        .sidebar h3 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid #FF7256;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color:#FFDAB9 ;
+            color: #333;
+        }
     </style>
   </head>
   <body>
